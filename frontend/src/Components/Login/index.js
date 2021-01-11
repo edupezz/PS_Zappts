@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Login(){
+export default function Login(props){
 
     const classes = useStyles();
 
@@ -81,7 +81,7 @@ export default function Login(){
     return(
         <LoginContainer>
 
-            <TopBar />
+            <TopBar></TopBar>
             <TitleContainer>
                 <p>Invision</p>
             </TitleContainer>
@@ -99,9 +99,8 @@ export default function Login(){
                             type="email"
                             name="username"
                             color={userError}
-                            title=""
-                            helperText={userHelpText}
                             onChange={ handleInput }
+                            helperText={userHelpText}
                             label="Users name or Email"
                             value={formValues.username}
                         />

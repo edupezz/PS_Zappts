@@ -1,17 +1,26 @@
 import styled from 'styled-components';
 import  {Button}  from '@material-ui/core'
 
-export const SignUpContainer = styled.main`
+export const SignUpContainer = styled.section`
 
     width: 50vw;
     display: flex;
     flex-flow: column;
+    background-color: #fff;
 
     #lastLine {
         margin: 0 auto;
         text-transform: capitalize;
         font-size: 0.7rem;
-}
+
+        @media(max-width: 800px){
+            display: none;
+        }
+    }
+
+    @media(max-width: 800px){
+        min-height: 100%;
+    }
 `
 export const TopBar = styled.div `
 
@@ -151,6 +160,11 @@ export const StyledGoogleButton = styled(Button)`
         box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
         -moz-box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
         -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
+
+        @media(max-width: 800px){
+            width: 30vw;
+            padding-bottom: 1vh;
+        }
     }
 `
 
