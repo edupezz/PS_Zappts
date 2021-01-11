@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
+    body{
+        width: 100%;
+    }
 `
 
 export default GlobalStyle;

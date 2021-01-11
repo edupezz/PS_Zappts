@@ -1,23 +1,37 @@
 import styled from 'styled-components';
 import  {Button}  from '@material-ui/core'
 
-export const LoginContainer = styled.section`
+export const LoginContainer = styled.div`
 
     width: 50vw;
     display: flex;
     flex-flow: column;
+    background-color: #fff;
 
     #lastLine {
         margin: 0 auto;
         text-transform: capitalize;
         font-size: 0.7rem;
-}
+
+        @media(max-width: 800px){
+            display: none;
+        }
+    }
+
+    @media(max-width: 800px){
+        z-index: 99;
+        min-height: 100%;
+    }
 `
 export const TopBar = styled.div `
 
     display: flex;
     width: 50vw;
     height: 10vh;
+
+    @media(max-width: 800px){
+        height: 0.5vh;
+    }
 `
 export const TitleContainer = styled.div `
 
@@ -39,11 +53,15 @@ export const GreetingContainer = styled.div `
     width: 50vw;
     display: flex;
     justify-content: center;
-    padding: 0 0 6vh 0;
+    padding: 0 0 5vh 0;
 
     p{
         font-size: 1.6rem;
         color: #707070;
+    }
+
+    @media(max-width: 800px){
+        padding: 0;
     }
 `
 
@@ -92,7 +110,7 @@ export const ResetPwdContainer = styled.div `
 
 
     p{
-        padding-right: 14vw;
+        padding-right: 10vw;
         font-size: 0.7rem;
         padding-top: 1rem;
         color: #707070;  
@@ -167,5 +185,12 @@ export const StyledGoogleButton = styled(Button)`
         box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
         -moz-box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
         -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
+
+        @media(max-width: 800px){
+            width: 30vw;
+            padding-bottom: 1vh;
+        }
     }
+
+    
 `

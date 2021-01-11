@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CarouselContainer = styled.section`
+export const CarouselContainer = styled.div`
 
     width: 50vw;
     display: flex;
@@ -33,6 +33,25 @@ export const CarouselContainer = styled.section`
 
     button {
         background-color: #fff;
+    }
+
+    @media(max-width: 800px){
+        width: 100vw;
+        padding: 0;
+        min-height: 100vh;
+
+        img{
+            width: 60%;
+            margin-top: 2vh;
+        }
+
+        p{
+        margin-top: 2vh;
+    }
+
+        p:last-child{
+            width: 45vw;
+        }
     }
 
 `
